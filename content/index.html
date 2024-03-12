@@ -6,37 +6,36 @@
 <body>
     <navbar>
         <div>
-            <img onclick='window.location.href = "./index.html";' role="button"
+            <img onclick='window.location.href = "../index.html";' role="button"
                 src="https://cdn-icons-png.flaticon.com/512/1/1014.png">
         </div>
         <ul>
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../gallery/index.html">Galleria</a></li>
             <li><a href="#">Contatti</a></li>
             <li><a href="#">Esplora</a></li>
         </ul>
     </navbar>
     <header>
-        <h1>BoSergreta: Scopri i segreti di Bologna</h1>
-        <h4>Scopri le chicche nascoste e sconosciute della città universitaria più antica del mondo.<br/>
-            Utilizzando esclusivamente immagini, video e registrazioni audio, qui potrai "sentire" e "vedere" Bologna.
-        </h4>
+        <h1></h1>
     </header>
     <main>
-        <section id="gallery">
-            <button class="left-arrow">←</button>
-            <div id="content">
-                <img id="image">
-
+        <section id="image">
+            <div >
             </div>
-
-            <button class="right-arrow">→</button>
-
         </section>
+        
         <aside>
-           
+            <div id="map"></div>
         </aside>
+
+        
+
     </main>
+    <section id="metadata">
+        <h3>Metadati</h3>
+        <ul id="ulMetadata"></ul>
+    </section>
     <footer>
         <section>
             <h3>BoSegreta</h3>
@@ -64,6 +63,13 @@
         </section>
     </footer>
 </body>
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+</script>
 <script src="script.js"></script>
 
 </html>
