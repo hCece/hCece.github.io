@@ -2,54 +2,71 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
+    <!-- Dublin Core Metadata Start -->
+    <meta name="DC.title" content="BoSegreta: Scopri i segreti di Bologna">
+    <meta name="DC.subject" content="Bologna, Segreti, Tursimo, Cultura, Storia, Arte">
+    <meta name="DC.description" content="BoSegreta offre un viaggio sensoriale posti nascosti e meno conosciuti di Bologna, utilizzando immagini, video e registrazioni audio.">
+    <meta name="DC.creator" content="Juri Horstmann">
+    <meta name="DC.date" content="2024-03-13 " scheme="YYYY-MM-DD">
+    <meta name="DC.type" content="Text">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.identifier" content="https://hcece.github.io/content/index.html">
+    <meta name="DC.language" content="it">
+    <meta name="DC.coverage" content="Bologna, Italia">
+    <!-- Dublin Core Metadata End -->
+</head>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Dublin Core Metadata in Head -->
+    <!-- (Meta tags come mostrato precedentemente) -->
 </head>
 <body>
-    <navbar>
+    <navbar data-dc="relation">
         <div>
             <img onclick='window.location.href = "./index.html";' role="button"
-                src="https://cdn-icons-png.flaticon.com/512/1/1014.png">
+                src="https://cdn-icons-png.flaticon.com/512/1/1014.png" data-dc="identifier">
         </div>
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="../gallery/index.html">Galleria</a></li>
-            <li><a href="#">Contatti</a></li>
-            <li><a href="#">Esplora</a></li>
+            <li><a href="./index.html" data-dc="relation">Home</a></li>
+            <li><a href="./gallery/index.html" data-dc="relation">Galleria</a></li>
+            <li><a href="#" data-dc="relation">Contatti</a></li>
+            <li><a href="#" data-dc="relation">Esplora</a></li>
         </ul>
     </navbar>
-    <header>
+    <header data-dc="title">
         <h1>BoSergreta: Scopri i segreti di Bologna</h1>
-        <h4>Scopri le chicche nascoste e sconosciute della città universitaria più antica del mondo.<br/>
+        <h4 data-dc="description">Scopri le chicche nascoste e sconosciute della città universitaria più antica del mondo.<br/>
             Utilizzando esclusivamente immagini, video e registrazioni audio, qui potrai "sentire" e "vedere" Bologna.
         </h4>
     </header>
-    <main>
-        <section id="gallery">
-            <button class="left-arrow">←</button>
-            <div id="content">
-                <img id="image">
-
+    <main data-dc="type">
+        <section id="gallery" data-dc="format">
+            <button class="left-arrow" data-dc="relation">←</button>
+            <div id="content" data-dc="source">
+                <img id="image" data-dc="relation">
             </div>
-
-            <button class="right-arrow">→</button>
-
+            <button class="right-arrow" data-dc="relation">→</button>
         </section>
-        <aside>
-           
+        <aside data-dc="type">
+            <!-- Potenzialmente utilizzato per contenuti correlati o pubblicità -->
         </aside>
     </main>
-    <footer>
+    <footer data-dc="coverage">
         <section>
             <h3>BoSegreta</h3>
-            <div class="social-logos">
-                <a href="https://twitter.com/yourtwitterhandle">
+            <div class="social-logos" data-dc="relation">
+                <a href="https://twitter.com/yourtwitterhandle" data-dc="relation">
                     <img src="https://www.unife.it/it/notizie/newsletter/loghi-social/twitter-logo.png/@@images/image.png" alt="Twitter">
                 </a>
-                <a href="https://facebook.com/yourfacebookpage">
+                <a href="https://facebook.com/yourfacebookpage" data-dc="relation">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
                 </a>
             </div>
         </section>        
-        <section>
+        <section data-dc="rights">
             <ul>
                 <li>Contatti</li>
                 <li>Regolamento</li>
@@ -58,12 +75,13 @@
                 <li>Lavora con noi</li>
             </ul>
             <div>
-                <input type="text" placeholder="Iscriviti alla newsletter">
-                <button>Iscriviti</button>
+                <input type="text" placeholder="Iscriviti alla newsletter" data-dc="relation">
+                <button data-dc="relation">Iscriviti</button>
             </div>
         </section>
     </footer>
 </body>
+
 <script src="script.js"></script>
 
 </html>

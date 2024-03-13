@@ -60,3 +60,17 @@ req.onreadystatechange = () => {
 req.open("GET", "https://api.jsonbin.io/v3/b/65eb0f271f5677401f3a4a74/latest", true);
 req.setRequestHeader("X-Master-Key", "$2b$10$nptEQV7BQ.JZcnJ0sWwfIOpydX/kY2umc3BeOHriEvvHHBMmG0QB6");
 req.send();
+document.addEventListener('DOMContentLoaded', function() {
+    var breadcrumbs = [
+        { name: "Home", url: "index.html" },
+    ];
+
+    var container = document.getElementById('breadcrumbsNav');
+    container.innerHTML = breadcrumbs.map(function(crumb, index) {
+        if (index < breadcrumbs.length - 1) {
+            return '<a href="' + crumb.url + '">' + crumb.name + '</a> <span> > </span> ';
+        } else {
+            return '<span>' + crumb.name + '</span>';
+        }
+    }).join('');
+});

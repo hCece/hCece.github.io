@@ -64,6 +64,13 @@ aside>div>button, aside>div>p, aside>div>h3{
     margin: 5px;
 }
 
+#breadcrumbsNav{
+    display: flex;
+    padding-left: 13%;
+    padding-top: 1%;
+    width: 100%;
+    height: 4%;
+}
 
 
 /*----------------------------------------*/

@@ -50,3 +50,19 @@ window.onload = () => {
   
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  var breadcrumbs = [
+      { name: "Home", url: "../index.html" },
+      { name: "Gallery", url: "../gallery/index.html" },
+      { name: "Photo", url: "#" } // L'ultimo elemento può non avere un URL se rappresenta la pagina corrente
+  ];
+
+  var container = document.getElementById('breadcrumbsNav');
+  container.innerHTML = breadcrumbs.map(function(crumb, index) {
+      if (index < breadcrumbs.length - 1) {
+          return '<a href="' + crumb.url + '">' + crumb.name + '</a><span> > </span>';
+      } else {
+          return '<span>' + crumb.name + '</span>';
+      }
+  }).join('');
+});
